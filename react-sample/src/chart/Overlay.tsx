@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { init, dispose, registerOverlay, Chart, KLineData } from 'klinecharts'
+import { init, dispose, registerOverlay, Chart, KLineData } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 

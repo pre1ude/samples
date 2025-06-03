@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { init, dispose, Chart, registerLocale } from 'klinecharts'
+import { init, dispose, Chart, registerLocale } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
@@ -9,7 +9,9 @@ registerLocale('zh-HK', {
   high: '高：',
   low: '低：',
   close: '收：',
-  volume: '成交量：'
+  volume: '成交量：',
+  turnover: '成交額：',
+  change: '漲幅：'
 })
 
 const locals = [

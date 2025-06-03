@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { init, dispose, Chart } from 'klinecharts'
+import { init, dispose, Chart } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 

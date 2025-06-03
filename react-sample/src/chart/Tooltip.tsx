@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { init, dispose, Chart, TooltipShowRule, TooltipShowType, CandleTooltipCustomCallbackData } from 'klinecharts'
+import { init, dispose, Chart, TooltipShowRule, TooltipShowType, CandleTooltipCustomCallbackData } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 

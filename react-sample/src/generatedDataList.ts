@@ -1,4 +1,4 @@
-import { KLineData } from "klinecharts"
+import { KLineData } from "@dm/klinecharts"
 
 function generatedDataList (baseTimestamp?: number, basePrice?: number, dataSize?: number) {
 
