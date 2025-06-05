@@ -34,6 +34,7 @@
   margin-top: 10px;
   font-size: 12px;
   color: #606060;
+  justify-content: space-evenly;
 }
 
 .app .k-line-chart-container .k-line-chart-menu-container button {
@@ -48,4 +49,9 @@
   color: #fff;
   border: none;
   outline: none;
+}
+
+.app input {
+  vertical-align: bottom;
+  margin-block: 0;
 }
