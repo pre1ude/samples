@@ -75,7 +75,7 @@ export default function CustomThemeKLineChart () {
           {
             positions.map(({ key, text }) => {
               return (
-                <label><input type="radio" name="position" value={key} checked={key === position} onChange={(e) => setPosition(e.target.value)} />{text}</label>
+                <label key={key}><input type="radio" name="position" value={key} checked={key === position} onChange={(e) => setPosition(e.target.value)} />{text}</label>
               )
             })
           }
@@ -85,7 +85,7 @@ export default function CustomThemeKLineChart () {
           {
             types.map(({ key, text }) => {
               return (
-                <label><input type="radio" name="type" value={key} checked={key === type} onChange={(e) => setType(e.target.value)} />{text}</label>
+                <label key={key}><input type="radio" name="type" value={key} checked={key === type} onChange={(e) => setType(e.target.value)} />{text}</label>
               )
             })
           }
