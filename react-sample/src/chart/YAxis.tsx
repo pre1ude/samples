@@ -5,7 +5,8 @@ import Layout from '../Layout'
 
 const positions = [
   { key: 'right', text: 'Right' },
-  { key: 'left', text: 'Left' }
+  { key: 'left', text: 'Left' },
+  { key: 'both', text: 'Both' }
 ]
 
 const types = [
@@ -36,11 +37,11 @@ export default function CustomThemeKLineChart () {
     })
   }, [position])
 
-  useEffect(() => {
-    chart.current?.setStyles({
-      yAxis: { type: type as YAxisType }
-    })
-  }, [type])
+  // useEffect(() => {
+  //   chart.current?.setStyles({
+  //     yAxis: { type: type as YAxisType }
+  //   })
+  // }, [type])
 
   useEffect(() => {
     chart.current?.setStyles({
@@ -80,7 +81,7 @@ export default function CustomThemeKLineChart () {
             })
           }
         </p>
-        <p>
+        {/* <p>
           类型:
           {
             types.map(({ key, text }) => {
@@ -89,7 +90,7 @@ export default function CustomThemeKLineChart () {
               )
             })
           }
-        </p>
+        </p> */}
       </div>
     </Layout>
   )
