@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { init, dispose, Chart, registerLocale } from '@dm/klinecharts'
+import { init, dispose, ChartApi, registerLocale } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
@@ -21,7 +21,7 @@ const locals = [
 ]
 
 export default function Language () {
-  const chart = useRef<Chart | null>()
+  const chart = useRef<ChartApi | null>()
   const [language, setLanguage] = useState('zh-CN')
 
   useEffect(() => {

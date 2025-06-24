@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { init, dispose, Chart, TooltipShowRule, TooltipShowType, CandleTooltipCustomCallbackData } from '@dm/klinecharts'
+import { init, dispose, ChartApi, TooltipShowRule, TooltipShowType, CandleTooltipCustomCallbackData } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
@@ -42,7 +42,7 @@ const rules = [
 ]
 
 export default function TooltipKLineChart () {
-  const chart = useRef<Chart | null>()
+  const chart = useRef<ChartApi | null>()
   const [candleShowType, setCandleShowType] = useState('standard')
   const [candleShowRule, setCandleShowRule] = useState('always')
   const [indicatorShowRule, setIndicatorShowRule] = useState('always')

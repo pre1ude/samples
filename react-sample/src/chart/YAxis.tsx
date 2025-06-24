@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { init, dispose, Chart, YAxisType, YAxisPosition } from '@dm/klinecharts'
+import { init, dispose, ChartApi, YAxisType, YAxisPosition } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
@@ -16,7 +16,7 @@ const types = [
 ]
 
 export default function CustomThemeKLineChart () {
-  const chart = useRef<Chart | null>()
+  const chart = useRef<ChartApi | null>()
   const [position, setPosition] = useState('right')
   const [type, setType] = useState('normal')
   const [isInside, setIsInside] = useState(false)

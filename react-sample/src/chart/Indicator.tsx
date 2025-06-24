@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { init, dispose, registerIndicator, Chart } from '@dm/klinecharts'
+import { init, dispose, registerIndicator, ChartApi } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
@@ -50,7 +50,7 @@ const mainIndicators = ['MA', 'EMA', 'SAR']
 const subIndicators = ['VOL', 'MACD', 'KDJ']
 
 export default function Indicator () {
-  const chart = useRef<Chart | null>()
+  const chart = useRef<ChartApi | null>()
   const paneId = useRef<string>('')
   useEffect(() => {
     chart.current = init('indicator-k-line')

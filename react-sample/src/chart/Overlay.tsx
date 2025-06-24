@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { init, dispose, registerOverlay, Chart, KLineData } from '@dm/klinecharts'
+import { init, dispose, registerOverlay, ChartApi, KLineData } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
@@ -36,7 +36,7 @@ const overlays = [
 ]
 
 export default function DrawGraphMarkKLineChart () {
-  const chart = useRef<Chart | null>()
+  const chart = useRef<ChartApi | null>()
   useEffect(() => {
     chart.current = init('overlay-k-line')
     chart.current?.applyNewData(generatedDataList())

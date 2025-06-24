@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { init, dispose, Chart } from '@dm/klinecharts'
+import { init, dispose, ChartApi } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
@@ -10,7 +10,7 @@ const timezones = [
 ]
 
 export default function Timezone () {
-  const chart = useRef<Chart | null>()
+  const chart = useRef<ChartApi | null>()
   useEffect(() => {
     chart.current = init('timezone-k-line')
     chart.current?.applyNewData(generatedDataList())

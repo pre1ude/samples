@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import { init, dispose, Chart } from '@dm/klinecharts'
+import { init, dispose, ChartApi } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
-function updateData (chart: Chart | null) {
+function updateData (chart: ChartApi | null) {
   setTimeout(() => {
     if (chart) {
       const dataList = chart.getDataList()

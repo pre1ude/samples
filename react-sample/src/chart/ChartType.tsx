@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { init, dispose, Chart, CandleType, LineType } from '@dm/klinecharts'
+import { init, dispose, ChartApi, CandleType, LineType } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
@@ -13,7 +13,7 @@ const types = [
 ]
 
 export default function ChartType () {
-  const chart = useRef<Chart | null>()
+  const chart = useRef<ChartApi | null>()
 
   useEffect(() => {
     chart.current = init('real-time-k-line', {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { init, dispose, Chart } from '@dm/klinecharts'
+import { init, dispose, ChartApi } from '@dm/klinecharts'
 import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
 
@@ -9,7 +9,7 @@ const themes = [
 ]
 
 export default function CustomThemeKLineChart () {
-  const chart = useRef<Chart | null>()
+  const chart = useRef<ChartApi | null>()
   const [theme, setTheme] = useState('light')
 
   useEffect(() => {
