@@ -1,8 +1,10 @@
 import React from 'react'
+import MinuteChart from './chart/MinuteChart'
+import MinuteChartDM from './chart/MinuteChartDM'
 // import ChartType from './chart/ChartType'
 // import Indicator from './chart/Indicator'
 // import Theme from './chart/Theme'
-import YAxis from './chart/YAxis'
+// import YAxis from './chart/YAxis'
 // import Language from './chart/Language'
 // import Tooltip from './chart/Tooltip'
 // import Timezone from './chart/Timezone'
@@ -16,9 +18,11 @@ function App() {
   return (
     <div
       className="app">
+      <MinuteChart/>
+      <MinuteChartDM/>
       {/* <ChartType/> */}
       {/* <Theme/> */}
-      <YAxis/>
+      {/* <YAxis/> */}
       {/* <Language/> */}
       {/* <Tooltip/> */}
       {/* <Timezone/> */}
