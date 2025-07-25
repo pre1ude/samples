@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react'
-import { init, dispose, Chart, CandleType, LineType, YAxisPosition } from 'klinecharts'
-import generatedDataList from '../generatedDataList'
+import { init, dispose, Chart, CandleType, LineType, YAxisPosition, LayoutChildType, PanePosition } from 'klinecharts'
+// import generatedDataList from '../generatedDataList'
 import Layout from '../Layout'
+import data0 from '../generatedData'
 
 /* const types = [
   { key: 'candle_solid', text: '蜡烛实心' },
@@ -17,6 +18,28 @@ export default function ChartType () {
 
   useEffect(() => { 
     const chart = init('real-time-k-line', {
+      layout: [
+        { 
+          type: "candle" as LayoutChildType,
+          content: [
+            { name: "MA" }
+          ],
+          options: {
+            axisOptions: {
+              scrollZoomEnabled: true,
+            }
+          }
+        },
+        {
+          type: 'xAxis' as LayoutChildType,
+          options: {
+            position: "bottom" as PanePosition,
+            axisOptions: {
+              scrollZoomEnabled: true
+            }
+          }
+        }
+      ],
       styles: { 
         grid: { horizontal: { style: LineType.Dashed } },
         candle: {
@@ -26,13 +49,13 @@ export default function ChartType () {
       }
     })
     // 设置最右边贴边
-    chart?.setOffsetRightDistance(0)
+    // chart?.setOffsetRightDistance(0)
     // 设置禁止滚动 缩放
-    chart?.setScrollEnabled(!1)
+    // chart?.setScrollEnabled(!1)
     // chart?.setZoomEnabled(!1)
 
     
-    chart?.applyNewData(generatedDataList())
+    chart?.applyNewData(data0)
     chartRef.current = chart
 
     return () => {

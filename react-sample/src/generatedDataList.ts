@@ -5,7 +5,7 @@ function generatedDataList (baseTimestamp?: number, basePrice?: number, dataSize
   const dataList: KLineData[] = []
   let timestamp = Math.floor((baseTimestamp ?? Date.now()) / 60 / 1000) * 60 * 1000
   let baseValue = basePrice ?? 5000
-  const length = dataSize ?? 800
+  const length = dataSize ?? 240
   const prices = []
   for (let i = 0; i < length; i++) {
     baseValue = baseValue + Math.random() * 20 - 10
@@ -25,6 +25,7 @@ function generatedDataList (baseTimestamp?: number, basePrice?: number, dataSize
       high: prices[3],
       close: prices[closeIdx],
       volume: volume,
+      openInterest: Math.random() * 500 + 10,
       timestamp
     }
     timestamp -= 60 * 1000
